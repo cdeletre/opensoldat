@@ -33,7 +33,7 @@ type
   {**
    *  \brief Returns true if point resides inside a rectangle.
    *}
-function SDL_PointInRect(const p: PSDL_Point; const r: PSDL_Rect): Boolean; Inline;
+function SDL_PointInRect(const p: PSDL_Point; const r: PSDL_Rect): Boolean; {$IFDEF FPC}Inline;{$ENDIF}
 
   {**
    *  Returns true if the rectangle has no area.
@@ -41,13 +41,13 @@ function SDL_PointInRect(const p: PSDL_Point; const r: PSDL_Rect): Boolean; Inli
 
   //changed from variant(b�����h!) to TSDL_Rect
   //maybe PSDL_Rect?
-function SDL_RectEmpty(const r: PSDL_Rect): Boolean; inline;
+function SDL_RectEmpty(const r: PSDL_Rect): Boolean; {$IFDEF FPC}Inline;{$ENDIF}
 
     {**
      *  Returns true if the two rectangles are equal.
      *}
 
-function SDL_RectEquals(const a, b: PSDL_Rect): Boolean; inline;
+function SDL_RectEquals(const a, b: PSDL_Rect): Boolean; {$IFDEF FPC}Inline;{$ENDIF}
 
   {**
    *  Determine whether two rectangles intersect.

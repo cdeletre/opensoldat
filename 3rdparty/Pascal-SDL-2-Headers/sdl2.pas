@@ -146,7 +146,7 @@ interface
       X,
       XLib;
       {$ENDIF}
-  {$ENDIF}
+  {$IFEND}
 
 const
 
