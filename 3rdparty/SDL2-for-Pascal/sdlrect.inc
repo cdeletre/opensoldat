@@ -2,11 +2,8 @@
 
 type
   {**
-   *  The structure that defines a point
-   *
-   *  SDL_EnclosePoints
+   *  The structure that defines a point (integer)
    *}
-
   PSDL_Point = ^TSDL_Point;
   TSDL_Point = record
     x: SInt32;
@@ -14,16 +11,17 @@ type
   end;
 
   {**
-   *  A rectangle, with the origin at the upper left.
-   *
-   *  SDL_RectEmpty
-   *  SDL_RectEquals
-   *  SDL_HasIntersection
-   *  SDL_IntersectRect
-   *  SDL_UnionRect
-   *  SDL_EnclosePoints
+   *  The structure that defines a point (floating point)
    *}
+  PSDL_FPoint = ^TSDL_FPoint;
+  TSDL_FPoint = record
+    x: Single;
+    y: Single;
+  end;
 
+  {**
+   *  A rectangle, with the origin at the upper left. (integer)
+   *}
   PSDL_Rect = ^TSDL_Rect;
   TSDL_Rect = record
     x,y: SInt32;
@@ -31,9 +29,18 @@ type
   end;
 
   {**
+   *  A rectangle, with the origin at the upper left. (floating point)
+   *}
+  PSDL_FRect = ^TSDL_FRect;
+  TSDL_FRect = record
+    x,y: Single;
+    w,h: Single;
+  end;
+
+  {**
    *  \brief Returns true if point resides inside a rectangle.
    *}
-function SDL_PointInRect(const p: PSDL_Point; const r: PSDL_Rect): Boolean; {$IFDEF FPC}Inline;{$ENDIF}
+function SDL_PointInRect(const p: PSDL_Point; const r: PSDL_Rect): Boolean; Inline;
 
   {**
    *  Returns true if the rectangle has no area.
@@ -41,13 +48,13 @@ function SDL_PointInRect(const p: PSDL_Point; const r: PSDL_Rect): Boolean; {$IF
 
   //changed from variant(b�����h!) to TSDL_Rect
   //maybe PSDL_Rect?
-function SDL_RectEmpty(const r: PSDL_Rect): Boolean; {$IFDEF FPC}Inline;{$ENDIF}
+function SDL_RectEmpty(const r: PSDL_Rect): Boolean; inline;
 
     {**
      *  Returns true if the two rectangles are equal.
      *}
 
-function SDL_RectEquals(const a, b: PSDL_Rect): Boolean; {$IFDEF FPC}Inline;{$ENDIF}
+function SDL_RectEquals(const a, b: PSDL_Rect): Boolean; inline;
 
   {**
    *  Determine whether two rectangles intersect.
