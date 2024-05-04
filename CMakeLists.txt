@@ -114,7 +114,7 @@ add_flag_append(CMAKE_Pascal_FLAGS "-vm3123 -vm3124")
 add_flag_prepend(CMAKE_Pascal_FLAGS "-Fi${CMAKE_SOURCE_DIR}/shared")
 
 add_flag_prepend(CMAKE_Pascal_FLAGS
-                 "-Fu${CMAKE_SOURCE_DIR}/3rdparty/Pascal-SDL-2-Headers")
+                 "-Fu${CMAKE_SOURCE_DIR}/3rdparty/SDL2-for-Pascal")
 add_flag_prepend(CMAKE_Pascal_FLAGS "-Fu${CMAKE_SOURCE_DIR}/shared")
 add_flag_prepend(CMAKE_Pascal_FLAGS "-Fu${CMAKE_SOURCE_DIR}/shared/libs")
 add_flag_prepend(CMAKE_Pascal_FLAGS
