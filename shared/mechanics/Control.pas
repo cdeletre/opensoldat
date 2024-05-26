@@ -1763,7 +1763,10 @@ begin
 
               if (SpriteC.LegsAnimation.ID = CrouchRun.ID) or
                  (SpriteC.LegsAnimation.ID = CrouchRunBack.ID) then
-                Spriteparts.Forces[SpriteC.Num].X := -CROUCHRUNSPEED;
+                Spriteparts.Forces[SpriteC.Num].X := -CROUCHRUNSPEED
+              else if (SpriteC.LegsAnimation.ID = Roll.ID) or
+                      (SpriteC.LegsAnimation.ID = RollBack.ID) then
+                Spriteparts.Forces[SpriteC.Num].X := 2 * -CROUCHRUNSPEED;
             end;
           end
           // Proning
