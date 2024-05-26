@@ -609,7 +609,7 @@
         </Mode0>
       </Modes>
     </RunParams>
-    <Units Count="66">
+    <Units Count="67">
       <Unit0>
         <Filename Value="opensoldat.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -874,6 +874,10 @@
         <Filename Value="libs\openal\openal.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit65>
+      <Unit66>
+        <Filename Value="..\shared\mechanics\Control.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit66>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
