@@ -90,7 +90,7 @@ var
   ReadLength: LongInt;
 begin
   try
-    FSocket := TInetSocket.Create('127.0.0.1', FPort, 5000);
+    FSocket := TInetSocket.Create('127.0.0.1', FPort);
   except
     on SocketError: ESocketError do
     begin

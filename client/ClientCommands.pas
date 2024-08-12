@@ -60,6 +60,7 @@ var
   BindKeyName: AnsiString;
   CommandString: AnsiString;
   Keys: TStringDynArray;
+  Tmp: AnsiString;
   i: Integer;
   Modifier: TKeyMods;
 begin
@@ -68,8 +69,8 @@ begin
     MainConsole.Console('Usage: bind "key" "command"', GAME_MESSAGE_COLOR);
     Exit;
   end;
-
-  Keys := SplitString(LowerCase(Args[1]), '+');
+  Tmp := LowerCase(Args[1]);
+  Keys := Tmp.Split('+');
   CommandString := Args[2];
   Modifier := KM_NONE;
 
